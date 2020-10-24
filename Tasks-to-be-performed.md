@@ -1,6 +1,6 @@
   # C Sharp Grade Book Application
 
-The C Sharp Grade Book Application is a designed to allow instructors to create gradebooks, add students to those grade books, add grades to those students, and calculate statics such as GPA (Grade Point Average).
+The C Sharp Grade Book Application is a designed to allow instructors to create gradebooks, add students to those grade books, add grades to those students, and statics such as GPA (Grade Point Average).
 
 ## Accepted Commands
 
@@ -76,17 +76,17 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- This should be located in the `GradeBooks` directory.
 			- This should use the `GradeBook.GradeBooks` namespace.
 			- This should inherit the `BaseGradeBook` class.
-		- [ ] Create a constructor for `StandardGradeBook`
+		- [x] Create a constructor for `StandardGradeBook`
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Standard`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
 
-	- [ ] Creating the `RankedGradeBook` class
-		-  [ ] Create a class `RankedGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
+	- [x] Creating the `RankedGradeBook` class
+		-  [x] Create a class `RankedGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
 			- This should be located in the `GradeBooks` directory.
 			- This should use the `GradeBook.GradeBooks` namespace.
 			- This should inherit the `BaseGradeBook` class.
-		-  [ ] Create a constructor for `RankedGradeBook`
+		-  [x] Create a constructor for `RankedGradeBook`
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Ranked`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
@@ -101,18 +101,18 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- Return D if the input grade is between the top 60 and 80% of the class.
 			- Return F if the grade is below the top 80% of the class.
 
-	- [ ] Override `RankedGradeBook`'s `CalculateStatistics` method
-		- [ ] Short circuit the method if there are less than 5 students.
+	- [x] Override `RankedGradeBook`'s `CalculateStatistics` method
+		- [x] Short circuit the method if there are less than 5 students.
 			- If there are less than 5 students write "Ranked grading requires at least 5 students." to the Console.
 			- If there are 5 or more students call the base class's `CalculateStatistics` method using `base.CalculateStatistics`.
 
-	- [ ] Override `RankedGradeBook`'s `CalculateStudentStatistics` method
-		- [ ] Short circuit the method if there are less than 5 students.
+	- [x] Override `RankedGradeBook`'s `CalculateStudentStatistics` method
+		- [x] Short circuit the method if there are less than 5 students.
 			- If there are less than 5 students write "Ranked grading requires at least 5 students." to the Console.
 			- If there are 5 or more students call the base class's `CalculateStudentStatistics` method using `base.CalculateStudentStatistics`.
 
 	- [ ] Update `StartingUserInterface`'s `CreateCommand` method
-		- [ ] Update `CreateCommand`'s Conditions
+		- [x] Update `CreateCommand`'s Conditions
 			- When checking the `parts.Length` it should check that `parts.Length` is not 3.
 			- If `parts.Length` is not 3 write "Command not valid, Create requires a name and type of gradebook." to the Console.
 		- [ ] return a new GradeBook based on the provided type
@@ -127,28 +127,28 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 		- [ ] Add the `abstract` keyword to the `BaseGradeBook` declaration.
 
 - [ ] Add support for weighted GPAs
-	- [ ] Add `IsWeighted` property to `BaseGradeBook`
-		- [ ] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
+	- [x] Add `IsWeighted` property to `BaseGradeBook`
+		- [x] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
 			- This should use the public access modifier.
 			- This should be of type `bool`.
 			- This should be named `IsWeighted`.
 
 	- [ ] Refactor constructor of `BaseGradeBook`
 		_Note, once this group of tasks is begun the code will not compile until the entire group of tasks is complete._
-		- [ ] Add a `bool` to the `BaseGradeBook` constructor
+		- [x] Add a `bool` to the `BaseGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
-		- [ ] Set `IsWeight` in the `BaseGradeBook` constructor
-			- [ ] Set the `IsWeighted` property using the `bool` parameter
-		- [ ] Add a `bool` to the `StandardGradeBook` constructor
-			- This should be of type `bool`.
-			- This should be the second parameter.
-			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Add a `bool` to the `RankedGradeBook` constructor
+		- [x] Set `IsWeight` in the `BaseGradeBook` constructor
+			- [x] Set the `IsWeighted` property using the `bool` parameter
+		- [x] Add a `bool` to the `StandardGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
 			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Update `StartingUserInterface.CreateCommand` condition
+		- [x] Add a `bool` to the `RankedGradeBook` constructor
+			- This should be of type `bool`.
+			- This should be the second parameter.
+			- This will require the bool to be added to the call to the base constructor.
+		- [x] Update `StartingUserInterface.CreateCommand` condition
 			- Change the condition checking if `parts` is not equal to 3 to be is not equal to 4.
 		- [ ] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
 			- This should use `parts[3]` for the last parameter where the gradebooks are instantiated.
