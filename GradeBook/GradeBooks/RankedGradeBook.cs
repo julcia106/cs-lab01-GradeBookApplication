@@ -39,30 +39,6 @@ namespace GradeBook.GradeBooks
             {
                 return 'F';
             }
-
-            //var count = 0;
-
-            //for (var i = 0; i < Students.Count; ++i)
-            //{
-            //    if (Students[i].AverageGrade > averageGrade)
-            //    {
-            //        count++;
-            //    }
-            //}
-
-            //var countPercentage = count / Students.Count;
-
-            //if (countPercentage >= 0.8)
-            //    return 'A';
-            //else if (countPercentage >= 0.6 && countPercentage < 0.8)
-            //    return 'B';
-            //else if (countPercentage >= 0.4 && countPercentage < 0.6)
-            //    return 'C';
-            //else if (countPercentage >= 0.2 && countPercentage < 0.4)
-            //    return 'D';
-            //else
-            //    return 'F';
-
         }
 
         public override void CalculateStatistics()
